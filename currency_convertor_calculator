@@ -1,0 +1,65 @@
+package currency_Converter;
+
+import java.util.Scanner;
+
+public class currency_Converter 
+{
+	public static void main(String[] args) 
+	{
+		float inr,yuan,euro;
+		int usd;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the choice:");
+		System.out.println("1.INR to USD(USA)");
+		System.out.println("2.USD to INR");
+		System.out.println("3.INR to YUAN(China)");
+		System.out.println("4.YUAN to INR");
+		System.out.println("5.INR to EURO(Austria)");
+		System.out.println("6.EURO to INR");
+		
+		int choice = sc.nextInt();
+		
+		switch(choice)
+		{
+			case 1: System.out.println("Inter the INR value:");
+					inr = sc.nextFloat();
+					System.out.println("Converted into USD(USA):"+(inr/74.23)+" "+"$");
+					
+					break;
+					
+			case 2: System.out.println("Inter the USD value:");
+					inr = sc.nextFloat();
+					System.out.println("Converted into INR(India):"+(74.23*inr)+" "+"INR");
+			
+					break;
+					
+			case 3: System.out.println("Inter the INR value:");
+					inr = sc.nextFloat();
+					System.out.println("Converted into YUAN(Chaina):"+(inr/11.21)+" "+"¥");
+					
+					break;
+					
+			case 4: System.out.println("Inter the YUAN value:");
+					inr = sc.nextFloat();
+					System.out.println("Converted into INR(India):"+(11.21*inr)+" "+"INR");
+	
+					break;
+					
+			case 5: System.out.println("Inter the INR value:");
+					inr = sc.nextFloat();
+					System.out.println("Converted into EURO(Austria):"+(inr/87.76)+" "+"€");
+			
+					break;
+			
+			case 6: System.out.println("Inter the EURO value:");
+					inr = sc.nextFloat();
+					System.out.println("Converted into INR(India):"+(87.76*inr)+" "+"INR");
+	
+			break;
+					
+					default : System.out.println("Invalid option...Please try again");
+		}
+	}
+}
